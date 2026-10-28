@@ -1,0 +1,6 @@
+{
+  "name": "Arduino Library Studio - LED Strips & Custom Sensors",
+  "description": "Architect, simulate, test, and export production-ready Arduino C++ libraries for addressable RGB LED strips and custom sensor modules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

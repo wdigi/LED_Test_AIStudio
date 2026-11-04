@@ -82,7 +82,7 @@ export const RegisterMapEditor: React.FC<RegisterMapEditorProps> = ({
             Define registers, data lengths, signedness, and device handshake parameters.
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-1.5 px-2.5 py-1 bg-slate-950 rounded-lg border border-slate-800 text-xs font-mono text-slate-300">
             <span className="text-slate-500">I2C Addr:</span>
             <input
@@ -165,7 +165,7 @@ export const RegisterMapEditor: React.FC<RegisterMapEditorProps> = ({
           </div>
 
           {/* Quick Add Register Form */}
-          <div className="flex items-center gap-2 p-2 bg-slate-950 rounded-lg border border-slate-800 text-xs">
+          <div className="flex flex-wrap items-center gap-2 p-2 bg-slate-950 rounded-lg border border-slate-800 text-xs">
             <input
               type="text"
               value={newRegAddr}
@@ -185,7 +185,7 @@ export const RegisterMapEditor: React.FC<RegisterMapEditorProps> = ({
               value={newRegDesc}
               onChange={(e) => setNewRegDesc(e.target.value)}
               placeholder="Brief description"
-              className="flex-1 px-2 py-1.5 bg-slate-900 border border-slate-800 rounded text-slate-200 placeholder-slate-600 focus:outline-none focus:border-cyan-500"
+              className="flex-1 min-w-[8rem] px-2 py-1.5 bg-slate-900 border border-slate-800 rounded text-slate-200 placeholder-slate-600 focus:outline-none focus:border-cyan-500"
             />
             <button
               type="button"

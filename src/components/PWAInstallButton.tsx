@@ -59,7 +59,7 @@ export const PWAInstallButton: React.FC<PWAInstallButtonProps> = ({ variant = 'c
         }`}
       >
         <Smartphone className="w-3.5 h-3.5" />
-        <span>Install App</span>
+        <span className="hidden sm:inline">Install App</span>
       </button>
     );
   }
@@ -76,7 +76,7 @@ export const PWAInstallButton: React.FC<PWAInstallButtonProps> = ({ variant = 'c
         }`}
       >
         <Smartphone className="w-3.5 h-3.5" />
-        <span>Install on iPhone / iPad</span>
+        <span className="hidden sm:inline">Install on iPhone / iPad</span>
       </button>
 
       {showModal && (

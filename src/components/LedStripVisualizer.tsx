@@ -398,7 +398,7 @@ export const LedStripVisualizer: React.FC<LedStripVisualizerProps> = ({
     <div className="flex flex-col gap-3 p-4 bg-slate-900 rounded-xl border border-slate-800">
       {/* Visualizer Top Bar Controls */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 max-w-full">
           <div className="flex items-center gap-1 p-1 bg-slate-950 rounded-lg border border-slate-800">
             <button
               type="button"
@@ -422,7 +422,7 @@ export const LedStripVisualizer: React.FC<LedStripVisualizerProps> = ({
           </div>
 
           {/* Pattern selector */}
-          <div className="flex items-center gap-1 p-1 bg-slate-950 rounded-lg border border-slate-800">
+          <div className="flex flex-wrap items-center gap-1 p-1 bg-slate-950 rounded-lg border border-slate-800 max-w-full">
             {[
               { id: 'rainbow', label: 'Rainbow' },
               { id: 'comet', label: 'Comet' },
@@ -448,7 +448,7 @@ export const LedStripVisualizer: React.FC<LedStripVisualizerProps> = ({
         </div>
 
         {/* Layout Switcher & Speed slider */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-1.5 text-xs text-slate-400">
             <span>Interval</span>
             <input

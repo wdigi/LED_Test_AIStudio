@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
   libraryName,
 }) => {
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between gap-4 md:gap-8 px-4 md:px-6 py-3 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+    <header className="sticky top-0 z-30 flex items-center justify-between gap-3 md:gap-8 px-4 md:px-6 py-2.5 md:py-3 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
       {/* Zone 1: Single text element wordmark */}
       <div className="flex items-center gap-2.5 shrink-0">
         <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-teal-400 flex items-center justify-center text-slate-950 font-black text-sm shadow-md shadow-cyan-500/20">
@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           type="button"
           onClick={onExportZip}
-          className="flex items-center gap-2 px-3.5 md:px-4 py-2 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 rounded-lg shadow-md shadow-cyan-500/20 active:scale-95 transition-all whitespace-nowrap shrink-0"
+          className="hidden md:flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 rounded-lg shadow-md shadow-cyan-500/20 active:scale-95 transition-all whitespace-nowrap shrink-0"
         >
           <Download className="w-4 h-4" />
           <span>Export .ZIP</span>

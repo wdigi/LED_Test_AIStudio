@@ -184,20 +184,20 @@ export default function App() {
       />
 
       {/* Main Container with generous bottom padding for mobile bottom bar */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 pb-24 md:pb-8 space-y-6">
+      <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 pb-24 md:pb-8 space-y-4 md:space-y-6">
         {/* Workspace Title & Context Banner */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4 pb-3 md:pb-4 border-b border-slate-800">
           <div>
-            <div className="flex items-center gap-2 text-xs text-slate-400 font-mono mb-1">
+            <div className="flex flex-wrap items-center gap-x-2 text-xs text-slate-400 font-mono mb-1">
               <span>Architect</span>
               <span>·</span>
               <span className="text-cyan-400 font-semibold">{currentLibrary.name}</span>
               <span>·</span>
               <span>v{currentLibrary.version}</span>
-              <span>·</span>
-              <span className="text-emerald-400">PWA Ready & Offline Installable</span>
+              <span className="hidden md:inline">·</span>
+              <span className="hidden md:inline text-emerald-400">PWA Ready & Offline Installable</span>
             </div>
-            <h1 className="text-xl md:text-2xl font-black tracking-tight text-white">
+            <h1 className="text-lg md:text-2xl font-black tracking-tight text-white">
               {activeTab === 'led_strip'
                 ? 'Addressable RGB LED Strip Library Studio'
                 : 'Custom Sensor Driver & Signal Conditioning Studio'}
@@ -214,7 +214,7 @@ export default function App() {
             <button
               type="button"
               onClick={handleExportZip}
-              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg shadow-sm transition-all"
+              className="hidden md:flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg shadow-sm transition-all"
             >
               <Download className="w-4 h-4" />
               <span>Download {currentLibrary.name}.zip</span>
@@ -223,7 +223,7 @@ export default function App() {
         </div>
 
         {/* Mobile PWA Companion Callout Banner */}
-        <div className="p-3.5 bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-900 rounded-xl border border-cyan-800/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+        <div className="hidden md:flex p-3.5 bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-900 rounded-xl border border-cyan-800/30 flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
               <Smartphone className="w-4 h-4" />
@@ -253,7 +253,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   01. Interactive Virtual LED Strip & Photon Simulator
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   Live Current & Optical Physics
                 </span>
               </div>
@@ -269,7 +269,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   02. Driver Architecture & Protocol Parameters
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   PROGMEM Gamma · Current Limiter · Non-Blocking Patterns
                 </span>
               </div>
@@ -285,7 +285,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   03. Electrical Schematic & Inrush Protection Pinout
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   470Ω Data Resistor · 1000µF Buffer Capacitor
                 </span>
               </div>
@@ -298,7 +298,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   04. Generated Arduino Library Source Code & Examples
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   Header (.h) · Implementation (.cpp) · Sketches (.ino) · Manifest
                 </span>
               </div>
@@ -313,7 +313,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   01. Live Digital Signal Conditioning & Oscilloscope Lab
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   Raw ADC · DSP Filter Trace · Calibration Curve · Alarm
                 </span>
               </div>
@@ -329,7 +329,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   02. Sensor Module Specifications & Calibration Model
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   Interface · Filter Coefficients · 2-Point Linear Math
                 </span>
               </div>
@@ -346,7 +346,7 @@ export default function App() {
                   <h3 className="text-sm font-bold text-white tracking-tight">
                     03. I2C Device Register Map & Bitfield Inspector
                   </h3>
-                  <span className="text-xs text-slate-400 font-mono">
+                  <span className="hidden md:inline text-xs text-slate-400 font-mono">
                     Registers · Byte Order · Handshake Signatures
                   </span>
                 </div>
@@ -363,7 +363,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   {sensorConfig.sensorType === 'i2c' ? '04.' : '03.'} Hardware Wiring & Bus Pull-Up Schematic
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   SDA/SCL 4.7kΩ Pull-ups · Decoupling Capacitors
                 </span>
               </div>
@@ -376,7 +376,7 @@ export default function App() {
                 <h3 className="text-sm font-bold text-white tracking-tight">
                   {sensorConfig.sensorType === 'i2c' ? '05.' : '04.'} Generated Arduino Library Source Code & Examples
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="hidden md:inline text-xs text-slate-400 font-mono">
                   Non-blocking Acquisition · Status Return Codes · Serial Plotter
                 </span>
               </div>
@@ -387,7 +387,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 border-t border-slate-800 bg-slate-950 text-xs text-slate-500 mb-14 md:mb-0">
+      <footer className="hidden md:block py-6 border-t border-slate-800 bg-slate-950 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="font-semibold text-slate-400">Arduino Library Studio</span>
